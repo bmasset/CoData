@@ -48,7 +48,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="1cz-Nr-khc">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xK-U2-EAp">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xK-U2-EAp" customClass="ViewShadow" customModule="CoData" customModuleProvider="target">
                                 <rect key="frame" x="10" y="96" width="394" height="75"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ajouter une liste" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eVi-yz-V3p">
@@ -88,6 +88,60 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-d6-Mpn">
                                 <rect key="frame" x="10" y="179" width="394" height="624"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listeCell" rowHeight="75" id="bqQ-BD-UIa" customClass="ListeCell" customModule="CoData" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="394" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bqQ-BD-UIa" id="vbc-PC-k23">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="74.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aI7-dZ-hKb">
+                                                    <rect key="frame" x="0.0" y="5" width="394" height="64.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xjt-ZI-GmM">
+                                                            <rect key="frame" x="0.0" y="24.5" width="394" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="lqA-nb-nXB"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                                            <color key="textColor" red="1" green="0.25490196079999999" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8k-rD-ned">
+                                                            <rect key="frame" x="8" y="0.0" width="378" height="24.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Xjt-ZI-GmM" secondAttribute="trailing" id="76Q-D7-IEK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="F8k-rD-ned" secondAttribute="trailing" constant="8" id="Dsu-q9-97h"/>
+                                                        <constraint firstItem="F8k-rD-ned" firstAttribute="top" secondItem="aI7-dZ-hKb" secondAttribute="top" id="END-YL-7pI"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Xjt-ZI-GmM" secondAttribute="bottom" id="buK-DA-Li0"/>
+                                                        <constraint firstItem="Xjt-ZI-GmM" firstAttribute="top" secondItem="F8k-rD-ned" secondAttribute="bottom" id="cmX-HE-xhk"/>
+                                                        <constraint firstItem="F8k-rD-ned" firstAttribute="leading" secondItem="aI7-dZ-hKb" secondAttribute="leading" constant="8" id="jKx-IH-shC"/>
+                                                        <constraint firstItem="Xjt-ZI-GmM" firstAttribute="leading" secondItem="aI7-dZ-hKb" secondAttribute="leading" id="yPZ-UR-qv4"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="aI7-dZ-hKb" firstAttribute="top" secondItem="vbc-PC-k23" secondAttribute="top" constant="5" id="0nT-NP-lMu"/>
+                                                <constraint firstAttribute="trailing" secondItem="aI7-dZ-hKb" secondAttribute="trailing" id="C2R-2W-nSh"/>
+                                                <constraint firstAttribute="bottom" secondItem="aI7-dZ-hKb" secondAttribute="bottom" constant="5" id="KDn-h4-hkA"/>
+                                                <constraint firstItem="aI7-dZ-hKb" firstAttribute="leading" secondItem="vbc-PC-k23" secondAttribute="leading" id="bzL-K6-40X"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dateLbl" destination="F8k-rD-ned" id="gR2-T9-FEx"/>
+                                            <outlet property="nameLbl" destination="Xjt-ZI-GmM" id="Sl6-4J-Wya"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

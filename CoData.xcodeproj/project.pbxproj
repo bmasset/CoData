@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6413DE3622D7292E00FA6ACF /* MaTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6413DE3522D7292E00FA6ACF /* MaTabBar.swift */; };
 		6413DE3922D7361700FA6ACF /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6413DE3822D7361700FA6ACF /* CoreDataHelper.swift */; };
+		6413DE3B22D78B9D00FA6ACF /* ListeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6413DE3A22D78B9D00FA6ACF /* ListeCell.swift */; };
+		6413DE3D22D78BD200FA6ACF /* ViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6413DE3C22D78BD200FA6ACF /* ViewShadow.swift */; };
 		64EC037522D5FC81000884CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC037422D5FC81000884CF /* AppDelegate.swift */; };
 		64EC037722D5FC81000884CF /* ListeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC037622D5FC81000884CF /* ListeController.swift */; };
 		64EC037A22D5FC81000884CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64EC037822D5FC81000884CF /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		6413DE3522D7292E00FA6ACF /* MaTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaTabBar.swift; sourceTree = "<group>"; };
 		6413DE3822D7361700FA6ACF /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		6413DE3A22D78B9D00FA6ACF /* ListeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeCell.swift; sourceTree = "<group>"; };
+		6413DE3C22D78BD200FA6ACF /* ViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShadow.swift; sourceTree = "<group>"; };
 		64EC037122D5FC81000884CF /* CoData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64EC037422D5FC81000884CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64EC037622D5FC81000884CF /* ListeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 		6413DE3422D728CD00FA6ACF /* Vue */ = {
 			isa = PBXGroup;
 			children = (
+				6413DE3A22D78B9D00FA6ACF /* ListeCell.swift */,
+				6413DE3C22D78BD200FA6ACF /* ViewShadow.swift */,
 			);
 			path = Vue;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6413DE3922D7361700FA6ACF /* CoreDataHelper.swift in Sources */,
+				6413DE3B22D78B9D00FA6ACF /* ListeCell.swift in Sources */,
+				6413DE3D22D78BD200FA6ACF /* ViewShadow.swift in Sources */,
 				64EC037722D5FC81000884CF /* ListeController.swift in Sources */,
 				64EC037522D5FC81000884CF /* AppDelegate.swift in Sources */,
 				64EC037D22D5FC81000884CF /* CoData.xcdatamodeld in Sources */,

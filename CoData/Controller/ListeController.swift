@@ -12,7 +12,7 @@ import CoreData
 class ListeController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var holderView: UIView!
+    @IBOutlet weak var holderView: ViewShadow!
     @IBOutlet weak var nameTF: UITextField!
     
     var listes: [Liste] = []
