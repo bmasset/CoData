@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ListeController: UIViewController {
 
@@ -14,12 +15,27 @@ class ListeController: UIViewController {
     @IBOutlet weak var holderView: UIView!
     @IBOutlet weak var nameTF: UITextField!
     
+    var listes: [Liste] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        updateListe()
     }
 
+    func updateListe() {
+        CoreDataHelper().getListe { (listes) in
+            if listes != nil {
+                DispatchQueue.main.async {
+                    self.listes = listes!
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
     @IBAction func addListe(_ sender: UIButton) {
+        CoreDataHelper().saveListe(nameTF.text)
+        updateListe()
         
     }
 }
