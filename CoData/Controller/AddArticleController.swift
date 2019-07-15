@@ -10,10 +10,28 @@ import UIKit
 
 class AddArticleController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var nameTF: UITextField!
+    
+    @IBOutlet weak var magasinTF: UITextField!
+    
+    @IBOutlet weak var prixTF: UITextField!
+    
     var liste: Liste!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+    @IBAction func addArticle(_ sender: Any) {
+    }
+        
+    @IBAction func pictureGallery(_ sender: Any) {
+    }
+    
+    @IBAction func camera(_ sender: Any) {
+    }
+    
 }
