@@ -11,6 +11,10 @@
 		6413DE3922D7361700FA6ACF /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6413DE3822D7361700FA6ACF /* CoreDataHelper.swift */; };
 		6413DE3B22D78B9D00FA6ACF /* ListeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6413DE3A22D78B9D00FA6ACF /* ListeCell.swift */; };
 		6413DE3D22D78BD200FA6ACF /* ViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6413DE3C22D78BD200FA6ACF /* ViewShadow.swift */; };
+		647E950222D87BC500D20C9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647E950122D87BC500D20C9A /* Extensions.swift */; };
+		648F13C522DC8F14009A21BB /* ArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648F13C422DC8F14009A21BB /* ArticleController.swift */; };
+		648F13C722DC8F9F009A21BB /* AddArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648F13C622DC8F9F009A21BB /* AddArticleController.swift */; };
+		648F13C922DC8FE7009A21BB /* AllArticlesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648F13C822DC8FE7009A21BB /* AllArticlesController.swift */; };
 		64EC037522D5FC81000884CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC037422D5FC81000884CF /* AppDelegate.swift */; };
 		64EC037722D5FC81000884CF /* ListeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC037622D5FC81000884CF /* ListeController.swift */; };
 		64EC037A22D5FC81000884CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64EC037822D5FC81000884CF /* Main.storyboard */; };
@@ -24,6 +28,10 @@
 		6413DE3822D7361700FA6ACF /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		6413DE3A22D78B9D00FA6ACF /* ListeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeCell.swift; sourceTree = "<group>"; };
 		6413DE3C22D78BD200FA6ACF /* ViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShadow.swift; sourceTree = "<group>"; };
+		647E950122D87BC500D20C9A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		648F13C422DC8F14009A21BB /* ArticleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleController.swift; sourceTree = "<group>"; };
+		648F13C622DC8F9F009A21BB /* AddArticleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArticleController.swift; sourceTree = "<group>"; };
+		648F13C822DC8FE7009A21BB /* AllArticlesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllArticlesController.swift; sourceTree = "<group>"; };
 		64EC037122D5FC81000884CF /* CoData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64EC037422D5FC81000884CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64EC037622D5FC81000884CF /* ListeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeController.swift; sourceTree = "<group>"; };
@@ -50,6 +58,9 @@
 			children = (
 				64EC037622D5FC81000884CF /* ListeController.swift */,
 				6413DE3522D7292E00FA6ACF /* MaTabBar.swift */,
+				648F13C422DC8F14009A21BB /* ArticleController.swift */,
+				648F13C822DC8FE7009A21BB /* AllArticlesController.swift */,
+				648F13C622DC8F9F009A21BB /* AddArticleController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -59,6 +70,7 @@
 			children = (
 				64EC037B22D5FC81000884CF /* CoData.xcdatamodeld */,
 				6413DE3822D7361700FA6ACF /* CoreDataHelper.swift */,
+				647E950122D87BC500D20C9A /* Extensions.swift */,
 			);
 			name = "Modèle";
 			path = "Modèle";
@@ -184,10 +196,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6413DE3922D7361700FA6ACF /* CoreDataHelper.swift in Sources */,
+				648F13C922DC8FE7009A21BB /* AllArticlesController.swift in Sources */,
 				6413DE3B22D78B9D00FA6ACF /* ListeCell.swift in Sources */,
 				6413DE3D22D78BD200FA6ACF /* ViewShadow.swift in Sources */,
+				647E950222D87BC500D20C9A /* Extensions.swift in Sources */,
+				648F13C722DC8F9F009A21BB /* AddArticleController.swift in Sources */,
 				64EC037722D5FC81000884CF /* ListeController.swift in Sources */,
 				64EC037522D5FC81000884CF /* AppDelegate.swift in Sources */,
+				648F13C522DC8F14009A21BB /* ArticleController.swift in Sources */,
 				64EC037D22D5FC81000884CF /* CoData.xcdatamodeld in Sources */,
 				6413DE3622D7292E00FA6ACF /* MaTabBar.swift in Sources */,
 			);
@@ -334,7 +350,7 @@
 		64EC038722D5FC83000884CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 558R6FZ5MA;
 				INFOPLIST_FILE = CoData/Info.plist;
@@ -352,7 +368,7 @@
 		64EC038822D5FC83000884CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 558R6FZ5MA;
 				INFOPLIST_FILE = CoData/Info.plist;

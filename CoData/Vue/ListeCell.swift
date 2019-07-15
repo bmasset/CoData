@@ -18,7 +18,11 @@ class ListeCell: UITableViewCell {
     func setupCell(liste: Liste) {
         self.liste = liste
         nameLbl.text = self.liste.name
-    
+        if self.liste.date != nil {
+            dateLbl.text = "Créé le " + self.liste.date!.toString()
+        } else{
+            dateLbl.text = "Aucune date disponible"
+        }
     }
     
 }

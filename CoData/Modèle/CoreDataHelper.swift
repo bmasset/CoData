@@ -54,4 +54,14 @@ class CoreDataHelper {
             print(error.localizedDescription)
         }
     }
+    
+    func deleteListe(_ liste:Liste) {
+        context.delete(liste)
+        do {
+            try context.save()
+        } catch {
+          print(error.localizedDescription)
+        }
+        
+    }
 }
