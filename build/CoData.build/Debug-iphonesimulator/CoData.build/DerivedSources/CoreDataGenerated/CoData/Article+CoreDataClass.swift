@@ -1,5 +1,5 @@
 //
-//  Liste+CoreDataClass.swift
+//  Article+CoreDataClass.swift
 //  
 //
 //  Created by B Masset on 16/07/2019.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(Liste)
-public class Liste: NSManagedObject {
+@objc(Article)
+public class Article: NSManagedObject {
 
 }
