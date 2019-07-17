@@ -15,6 +15,8 @@
 		648F13C522DC8F14009A21BB /* ArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648F13C422DC8F14009A21BB /* ArticleController.swift */; };
 		648F13C722DC8F9F009A21BB /* AddArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648F13C622DC8F9F009A21BB /* AddArticleController.swift */; };
 		648F13C922DC8FE7009A21BB /* AllArticlesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648F13C822DC8FE7009A21BB /* AllArticlesController.swift */; };
+		64BB2DAD22DF46A400263BB5 /* MonArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB2DAB22DF46A400263BB5 /* MonArticleCell.swift */; };
+		64BB2DAE22DF46A400263BB5 /* MonArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64BB2DAC22DF46A400263BB5 /* MonArticleCell.xib */; };
 		64EC037522D5FC81000884CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC037422D5FC81000884CF /* AppDelegate.swift */; };
 		64EC037722D5FC81000884CF /* ListeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EC037622D5FC81000884CF /* ListeController.swift */; };
 		64EC037A22D5FC81000884CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64EC037822D5FC81000884CF /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 		648F13C422DC8F14009A21BB /* ArticleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleController.swift; sourceTree = "<group>"; };
 		648F13C622DC8F9F009A21BB /* AddArticleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArticleController.swift; sourceTree = "<group>"; };
 		648F13C822DC8FE7009A21BB /* AllArticlesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllArticlesController.swift; sourceTree = "<group>"; };
+		64BB2DAB22DF46A400263BB5 /* MonArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonArticleCell.swift; sourceTree = "<group>"; };
+		64BB2DAC22DF46A400263BB5 /* MonArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonArticleCell.xib; sourceTree = "<group>"; };
 		64EC037122D5FC81000884CF /* CoData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64EC037422D5FC81000884CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64EC037622D5FC81000884CF /* ListeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			children = (
 				6413DE3A22D78B9D00FA6ACF /* ListeCell.swift */,
 				6413DE3C22D78BD200FA6ACF /* ViewShadow.swift */,
+				64BB2DAB22DF46A400263BB5 /* MonArticleCell.swift */,
 			);
 			path = Vue;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 			children = (
 				64EC037822D5FC81000884CF /* Main.storyboard */,
 				64EC038022D5FC83000884CF /* LaunchScreen.storyboard */,
+				64BB2DAC22DF46A400263BB5 /* MonArticleCell.xib */,
 			);
 			path = "Interface Builder";
 			sourceTree = "<group>";
@@ -183,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64EC038222D5FC83000884CF /* LaunchScreen.storyboard in Resources */,
+				64BB2DAE22DF46A400263BB5 /* MonArticleCell.xib in Resources */,
 				64EC037F22D5FC83000884CF /* Assets.xcassets in Resources */,
 				64EC037A22D5FC81000884CF /* Main.storyboard in Resources */,
 			);
@@ -204,6 +211,7 @@
 				64EC037722D5FC81000884CF /* ListeController.swift in Sources */,
 				64EC037522D5FC81000884CF /* AppDelegate.swift in Sources */,
 				648F13C522DC8F14009A21BB /* ArticleController.swift in Sources */,
+				64BB2DAD22DF46A400263BB5 /* MonArticleCell.swift in Sources */,
 				64EC037D22D5FC81000884CF /* CoData.xcdatamodeld in Sources */,
 				6413DE3622D7292E00FA6ACF /* MaTabBar.swift in Sources */,
 			);
