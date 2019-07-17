@@ -2,7 +2,7 @@
 //  Liste+CoreDataProperties.swift
 //  
 //
-//  Created by B Masset on 16/07/2019.
+//  Created by B Masset on 17/07/2019.
 //
 //  This file was automatically generated and should not be edited.
 //

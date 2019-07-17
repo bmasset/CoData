@@ -11,10 +11,22 @@ import UIKit
 class ArticleController: UIViewController {
     
     var liste: Liste!
+    var articles: [Article] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let articles = liste.article?.allObjects as? [Article] {
+            self.articles = articles
+            //for article in articles {
+            //    print(article.name, article.prix)
+            //}
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

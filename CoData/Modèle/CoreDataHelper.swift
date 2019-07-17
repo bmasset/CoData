@@ -64,4 +64,19 @@ class CoreDataHelper {
         }
         
     }
+    
+    // Logique Entity Article
+    
+    func saveArticle(name: String?, shop: String?, prix: String?, image: UIImage?, liste: Liste) {
+        let new = Article(context: context)
+        new.date = Date()
+        new.name = name
+        new.shop = shop
+        new.image = image
+        if let str = prix, let double = Double(str) {
+            new.prix = double
+        }
+        new.liste = liste
+        save()
+    }
 }
