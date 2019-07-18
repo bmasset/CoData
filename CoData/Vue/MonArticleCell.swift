@@ -34,4 +34,9 @@ class MonArticleCell: UITableViewCell {
         
         articleIV.image = self.article.image as? UIImage
     }
+    
+    @IBAction func supprimer(_ sender: Any) {
+        CoreDataHelper().deleteArticle(self.article)
+    }
+    
 }

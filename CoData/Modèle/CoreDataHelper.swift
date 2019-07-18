@@ -56,6 +56,12 @@ class CoreDataHelper {
     }
     
     func deleteListe(_ liste:Liste) {
+        if let articles = liste.article?.allObjects as? [Article] {
+            for article in articles {
+                context.delete(article)
+            }
+        }
+        
         context.delete(liste)
         do {
             try context.save()
@@ -78,5 +84,16 @@ class CoreDataHelper {
         }
         new.liste = liste
         save()
+    }
+    
+    func deleteArticle(_ article: Article) {
+        context.delete(article)
+        do {
+            try context.save()
+            NotificationCenter.default.post(name: Notification.Name("delete"), object: nil)
+            
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }

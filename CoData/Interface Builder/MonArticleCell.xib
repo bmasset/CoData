@@ -62,6 +62,9 @@
                                     <constraint firstAttribute="height" constant="45" id="GF6-GF-Zbu"/>
                                 </constraints>
                                 <state key="normal" image="delete"/>
+                                <connections>
+                                    <action selector="supprimer:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aVs-SR-woC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="zzV-I0-RgT">
                                 <rect key="frame" x="8" y="208" width="290" height="20.5"/>

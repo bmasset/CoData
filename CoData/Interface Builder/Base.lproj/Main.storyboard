@@ -184,11 +184,20 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="l5D-Vj-QZM">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yaY-Dz-iCc">
+                                <rect key="frame" x="16" y="98" width="382" height="705"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="2sA-26-Cqn" firstAttribute="trailing" secondItem="yaY-Dz-iCc" secondAttribute="trailing" constant="16" id="1Mz-QR-uPn"/>
                             <constraint firstItem="l5D-Vj-QZM" firstAttribute="leading" secondItem="2sA-26-Cqn" secondAttribute="leading" id="91L-Hs-CWA"/>
                             <constraint firstItem="2sA-26-Cqn" firstAttribute="trailing" secondItem="l5D-Vj-QZM" secondAttribute="trailing" id="Adu-R6-cn6"/>
+                            <constraint firstItem="yaY-Dz-iCc" firstAttribute="top" secondItem="2sA-26-Cqn" secondAttribute="top" constant="10" id="S1y-R9-lBo"/>
+                            <constraint firstItem="2sA-26-Cqn" firstAttribute="bottom" secondItem="yaY-Dz-iCc" secondAttribute="bottom" constant="10" id="a9U-HU-qRc"/>
+                            <constraint firstItem="yaY-Dz-iCc" firstAttribute="leading" secondItem="2sA-26-Cqn" secondAttribute="leading" constant="16" id="pKR-kw-ggW"/>
                             <constraint firstItem="2sA-26-Cqn" firstAttribute="bottom" secondItem="l5D-Vj-QZM" secondAttribute="bottom" id="zVm-8o-nut"/>
                             <constraint firstItem="l5D-Vj-QZM" firstAttribute="top" secondItem="2sA-26-Cqn" secondAttribute="top" id="zYj-Jo-5ma"/>
                         </constraints>
@@ -202,6 +211,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="yaY-Dz-iCc" id="L9Y-ot-z5F"/>
                         <segue destination="U2h-i9-XNy" kind="show" identifier="add" id="nUg-7Q-7DA"/>
                     </connections>
                 </viewController>
