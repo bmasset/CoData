@@ -21,17 +21,40 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="6yo-FB-8OL">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </imageView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tLd-YX-ui4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="eqK-QL-qXZ"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1pm-GN-zIJ">
+                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6yo-FB-8OL" firstAttribute="top" secondItem="oKd-UK-Rno" secondAttribute="top" id="1ub-Dt-NMD"/>
+                            <constraint firstItem="oKd-UK-Rno" firstAttribute="bottom" secondItem="1pm-GN-zIJ" secondAttribute="bottom" id="58H-cO-2fR"/>
+                            <constraint firstItem="tLd-YX-ui4" firstAttribute="leading" secondItem="oKd-UK-Rno" secondAttribute="leading" id="BRP-hX-dlA"/>
+                            <constraint firstItem="oKd-UK-Rno" firstAttribute="trailing" secondItem="1pm-GN-zIJ" secondAttribute="trailing" id="ETk-KV-hOT"/>
+                            <constraint firstItem="1pm-GN-zIJ" firstAttribute="leading" secondItem="oKd-UK-Rno" secondAttribute="leading" id="R2K-4p-41F"/>
+                            <constraint firstItem="tLd-YX-ui4" firstAttribute="top" secondItem="oKd-UK-Rno" secondAttribute="top" id="UvP-Uy-BJN"/>
                             <constraint firstItem="6yo-FB-8OL" firstAttribute="leading" secondItem="oKd-UK-Rno" secondAttribute="leading" id="bKJ-bA-6tB"/>
+                            <constraint firstItem="tLd-YX-ui4" firstAttribute="trailing" secondItem="oKd-UK-Rno" secondAttribute="trailing" id="hVy-QA-B0b"/>
                             <constraint firstItem="oKd-UK-Rno" firstAttribute="trailing" secondItem="6yo-FB-8OL" secondAttribute="trailing" id="lYS-9l-Xd1"/>
+                            <constraint firstItem="1pm-GN-zIJ" firstAttribute="top" secondItem="tLd-YX-ui4" secondAttribute="bottom" id="r8t-je-lMq"/>
                             <constraint firstItem="oKd-UK-Rno" firstAttribute="bottom" secondItem="6yo-FB-8OL" secondAttribute="bottom" id="zvh-Ll-DUw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oKd-UK-Rno"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Article" selectedImage="article" id="AgG-I1-Gvy"/>
+                    <connections>
+                        <outlet property="searchBar" destination="tLd-YX-ui4" id="jfM-VT-DAu"/>
+                        <outlet property="tableView" destination="1pm-GN-zIJ" id="Y5W-hA-uq8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4n-PE-jz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

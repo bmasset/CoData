@@ -12,8 +12,14 @@ extension Date {
     
     func toString() -> String {
         let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
+        let calendar = Calendar.current
+        if calendar.isDateInToday(self) {
+            formatter.timeStyle = .short
+            formatter.dateStyle = .none
+        } else {
+            formatter.dateStyle = .medium
+            formatter.timeStyle = .none
+        }
         return formatter.string(from: self)
     }
 }

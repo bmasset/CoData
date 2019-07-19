@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 typealias ListeCompletion = (_ listes: [Liste]?) -> Void
+typealias ArticleCompletion = (_ articles: [Article]?) -> Void
 
 class CoreDataHelper {
     
@@ -86,12 +87,39 @@ class CoreDataHelper {
         save()
     }
     
+    func allArticles(completion: ArticleCompletion?) {
+        let request: NSFetchRequest<Article> = Article.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        request.sortDescriptors = [sortDescriptor]
+        do {
+            let articles = try context.fetch(request)
+            completion?(articles)
+        } catch {
+            print(error.localizedDescription)
+            completion?(nil)
+        }
+    }
+    
+    func queryArticle(string: String, completion: ArticleCompletion?) {
+        let fetchRequest: NSFetchRequest<Article> = Article.fetchRequest()
+        let sort = NSSortDescriptor(key: "name", ascending: true)
+        let predicate = NSPredicate(format: "name contains[c]%@", string)
+        fetchRequest.sortDescriptors = [sort]
+        fetchRequest.predicate = predicate
+        do {
+            let articles = try context.fetch(fetchRequest)
+            completion?(articles)
+        } catch {
+            print(error.localizedDescription)
+            completion?(nil)
+        }
+    }
+    
     func deleteArticle(_ article: Article) {
         context.delete(article)
         do {
             try context.save()
             NotificationCenter.default.post(name: Notification.Name("delete"), object: nil)
-            
         } catch {
             print(error.localizedDescription)
         }

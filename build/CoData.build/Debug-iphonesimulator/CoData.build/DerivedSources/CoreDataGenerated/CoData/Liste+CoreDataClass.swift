@@ -2,7 +2,7 @@
 //  Liste+CoreDataClass.swift
 //  
 //
-//  Created by B Masset on 18/07/2019.
+//  Created by B Masset on 19/07/2019.
 //
 //  This file was automatically generated and should not be edited.
 //
